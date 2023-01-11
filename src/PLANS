@@ -1,0 +1,98 @@
+Architecture to consider
+
+- Selector functions in a mode slice/all modes slice file
+- Selector functions pull data from the redux state
+- Files for various state change actions, for example, user actions (logging out, logging in, changing name), settings actions(could be one settings file for each mode)
+  - Question: log and mode UI share actions (i.e. saving a story to log in settings view, logging a love response in view). How should these files be structured? Does it matter?
+  - I guess log will not need to add or delete files, it is there to display the files.
+  - Conclusion: Create two files and create repetition...It is more important to prvent crossing the files. Make it a standard that debugging is done in a modular, linear flow.
+  - I dont believe this necessitates calling data teice either. If the person lands on the page and needs data, it will run for it, but if it is not updated, run for your formulas.
+
+11272022
+
+- Accomplished: Moved the framework for newcamptie to tshare. Not quite certain how it works still, but I am in the process. Right now, trying to update a store through a async call to firebase. THere is still a long way to go. I most def do not need redux in this application, but we will do it anyways.
+- Keep checking out tutorials that operate CRUD operations with REDUX.
+
+
+11292022
+Data Structures
+
+
+//going to keep feedback at a default
+Settings {
+  settingsMode: "",
+  loveModeSettings: {
+    includeYourName:bool,
+    yourName: ""
+    includeTargetName: bool,
+    targetName: "",
+    goal: "",
+    dateDetails: ""
+  },
+
+  promptModeSettings {
+    currentPromptResponseId: ""
+    promptMode: "",
+    customPrompt: "",
+    currentPromptResponse: {
+      ["response", "optionalName"],
+      ["response", "optionalName"]
+      ["response", "optionalName"]
+    },
+    allPromptResponseId: [
+      "", "", "", ""
+    ]
+  }
+  
+}
+
+Log {
+  //not sure what the syntax is for an array
+  loveLog: {
+    [{
+      name: "",
+      dateTime: "",
+      phone: "",
+      response: ""},
+      {
+      name: "",
+      dateTime: "",
+      phone: "",
+      response: ""},
+      {....
+
+      }
+
+    ]
+  },
+  promptLog: {
+    [
+      {
+        promptResponseId: "",
+        promptMode: "",
+        customPrompt: "",
+        currentPromptResponse: {
+      ["response", "optionalName"],
+      ["response", "optionalName"]
+      ["response", "optionalName"]
+    }
+      },
+      {.....}
+    ]
+  },
+  feedbackLog: {
+    {
+      name:"",
+      dateTime:"",
+      rating: 0,
+      speakAgain: bool,
+      phone: ""
+    },
+    {.....}
+  }
+}
+
+
+
+- Good sesh. Continue to practice loading state into the form and completing a completet update to it...
+- was working on how to pull the selector values to create a default mode for the state, then how to change a value in the local state, and on submit, change the global state to the updated values 

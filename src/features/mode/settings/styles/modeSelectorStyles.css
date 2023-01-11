@@ -1,0 +1,14 @@
+.card:hover{
+    background-color: lightblue;
+
+
+
+}
+
+
+
+/*  i dont think this is a modular css page...a few things.
+I need to be able to include variables, import the occassional reusable class, but have modular files where I can make specific changes.
+
+
+*/
