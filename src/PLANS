@@ -1,3 +1,18 @@
+030123
+
+TODO
+- Refactor redux code and make it scalable, based on keys for mode selection and computed values
+- imlpement stripe store
+- implement Introduction
+
+
+
+
+
+
+
+
+
 Architecture to consider
 
 - Selector functions in a mode slice/all modes slice file

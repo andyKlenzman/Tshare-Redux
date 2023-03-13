@@ -10,11 +10,11 @@ const LandingPage = () => {
       <img className="mx-auto  h-20 " src={logoFull}></img>
         
         <p className="text-2xl font-display font-bold">
-        where fashion meets technology
+         let's breaks the ice
         </p>
 
         <p className="max-w-screen-md text-2xl m-4 mx-auto align-text-center">
-        Our t-shirts are more than just a fashion statement - they're a wearable, interactive experience. Each shirt features a QR code that connects to a unique, customizable webpage, allowing you to share your personal brand, promote a message, or just have some fun.
+        Our shirts are more than just a fashion statement - they're an interactive experience. Each shirt features a QR code that connects to a unique, customizable webpage, allowing you to share your personal brand, promote a message, or just have some fun.
         </p>
 
         <div>
